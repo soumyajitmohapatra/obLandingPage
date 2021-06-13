@@ -23,7 +23,7 @@ const Contact = ({ title, subtitle, id }) => {
           </a>
           {subtitle}
         </p>
-        <form name="contact">
+        <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
           <div className="input-area">
             <input
               type="text"
