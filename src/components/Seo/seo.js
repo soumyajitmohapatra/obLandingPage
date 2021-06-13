@@ -14,7 +14,7 @@ const SEO = ({ title, description, lang, image, article }) => {
     defaultDescription,
     authorSite,
     defaultImage,
-    twitterUsername,
+    facebookUsername,
   } = site.siteMetadata
 
   const seo = {
@@ -39,13 +39,13 @@ const SEO = ({ title, description, lang, image, article }) => {
         <meta property="og:description" content={seo.description} />
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta name="twitter:card" content="summary_large_image" />
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="facebook:card" content="summary_large_image" />
+      {facebookUsername && (
+        <meta name="facebook:creator" content={facebookUsername} />
       )}
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.title && <meta name="facebook:title" content={seo.title} />}
       {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
+        <meta name="facebook:description" content={seo.description} />
       )}
       {seo.image && <meta name="twitter:image" content={seo.image} />}
     </Helmet>
@@ -78,7 +78,7 @@ const query = graphql`
         defaultDescription: description
         authorSite: authorSite
         defaultImage: image
-        twitterUsername
+        facebookUsername
       }
     }
   }

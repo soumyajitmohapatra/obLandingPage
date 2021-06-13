@@ -4,17 +4,21 @@ import styled from "styled-components"
 function index() {
   return (
     <Section>
-      <div class="card active">
+      <div className="card active">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
         <h4>Er Mahabir Biswal</h4>
         <small>Founder and Chairman</small>
-        <button>Connect</button>
+        <button>
+          <a href="mailto:mahabirbiswal1234@gmail.com">Connect</a>
+        </button>
       </div>
-      <div class="card active">
+      <div className="card active">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
         <h4>Ramkinkar Mishara</h4>
         <small>CEO</small>
-        <button>Connect</button>
+        <button>
+          <a href="mailto:rakimishra1@gmail.com">Connect</a>
+        </button>
       </div>
     </Section>
   )
@@ -28,6 +32,10 @@ const Section = styled.section`
   justify-content: space-around;
   padding: 0px 140px 0px 140px;
   color: #1b1b1b;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
   @media all and (max-width: 500px) {
     flex-direction: column;
     padding: 0px;

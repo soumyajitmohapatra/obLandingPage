@@ -12,7 +12,7 @@ const Navbar = ({ Logo }) => {
   return (
     <NavStyles>
       <div className="masthead flex-container">
-        <img src={Logo} alt="Logo" style={{ width: "22%" }} />
+        <img src={Logo} alt="Logo" />
         <button
           className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
           type="button"
@@ -55,14 +55,12 @@ export const NavStyles = styled.nav`
     justify-content: space-between;
 
     img {
-      width: 90px;
-
-      @media (min-width: 768px) {
-        width: 100px;
+      width: 14%;
+      @media (max-width: 388px) {
+        width: 28%;
       }
-
       @media (min-width: 1200px) {
-        width: 120px;
+        width: 14%;
       }
     }
   }

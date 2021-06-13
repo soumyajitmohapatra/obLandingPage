@@ -6,7 +6,7 @@ import Perk from "../components/Perk/perk"
 import Button from "../components/Button/button"
 import Products from "../components/Products"
 import Product from "../components/Product"
-import Leader from '../components/CompanyLeader'
+import Leader from "../components/CompanyLeader"
 import Countdown from "../components/Countdown"
 import Contact from "../components/Contact/contact"
 import { Link } from "react-scroll"
@@ -27,9 +27,9 @@ const HomePage = () => {
         title="Our Mission"
         paragraph="Our mission is to serve the traditional and cultural flavoured drink of
         Odisha to the consumer which are now getting away due to the
-        modernization of society. now a days people want you have healthy
+        modernization of society. Now a days people want you have healthy
         natural and traditional drink but due to their busy day to day life
-        they are unable to have it. we will help them to overcome this
+        they are unable to have it, we will help them to overcome this
         problem by providing such kind of drink in a handy packaged manner."
       >
         <Link to="perks" smooth={true} duration={500}>
@@ -38,7 +38,7 @@ const HomePage = () => {
       </TextBlock>
       <TextBlockImg
         id="perks"
-        title="What do your expect from our products?"
+        title="What do you expect from our products?"
         subtitle="One good thing about our products is that the taste and nutrition go hand in hand. 
         Our products are enriched with Odia tradition and love of Odia Peoples. So you get what you want and what you love."
       >
@@ -64,11 +64,8 @@ const HomePage = () => {
           />
         </div>
       </TextBlockImg>
-      <Products  title="Product Launch" para="Countdown ends at July 30, 2021">
-        <Countdown
-          timeTillDate="06 30 2021, 6:00 am"
-          timeFormat="MM DD YYYY, h:mm a"
-        />
+      <Products title="Product Launch" para="Countdown ends at Aug 30, 2021">
+        <Countdown />
         {/* <IconContext.Provider
           value={{
             color: "#7FFF00",
@@ -146,12 +143,12 @@ const HomePage = () => {
           </Product>
         </IconContext.Provider> */}
       </Products>
-      <Leader/>
+      <Leader />
       <Contact
         id="contact"
         title="Get in touch"
         subtitle="or fill in the contact form down below."
-        />
+      />
     </>
   )
 }

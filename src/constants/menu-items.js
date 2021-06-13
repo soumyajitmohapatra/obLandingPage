@@ -1,5 +1,5 @@
 import React from "react"
-import { FaInstagram, FaFacebook } from "react-icons/fa"
+import { FaInstagram, FaFacebook, FaWhatsapp, FaLinkedin } from "react-icons/fa"
 
 export const mainMenuItems = [
   {
@@ -20,16 +20,26 @@ export const mainMenuItems = [
   },
 ]
 
-export const socialMenuItems = [ 
+export const socialMenuItems = [
   {
     icon: <FaFacebook />,
     url: "https://www.facebook.com/Odishabeverages/",
     name: "Facebook",
   },
   {
+    icon: <FaLinkedin />,
+    url: "https://www.linkedin.com/company/odisha-beverages-pvt-ltd/about/",
+    name: "Linkedin",
+  },
+  {
     icon: <FaInstagram />,
     url: "https://www.instagram.com/odisha_beverages_pvt._ltd/",
     name: "Instagram",
+  },
+  {
+    icon: <FaWhatsapp />,
+    url: "https://wa.me/9937384021/?text=Hi Odisha Beverages, ",
+    name: "Whatsapp",
   },
 ]
 

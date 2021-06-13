@@ -44,14 +44,14 @@ export const BannerStyles = styled.section`
       margin-top: 0;
       margin-bottom: 2rem;
       line-height: 1.2;
-      font-size: 1.15rem;
+      font-size: 1rem;
 
       @media (min-width: 768px) {
-        font-size: 1.35rem;
+        font-size: 1rem;
       }
 
       @media (min-width: 1200px) {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
     }
 
