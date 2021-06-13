@@ -7,8 +7,23 @@ const Contact = ({ title, subtitle, id }) => {
     <ContactWrapper id="contact">
       <div className="content-container">
         <h2>{title}</h2>
-        <p>{subtitle}</p>
-        <form name="contact" netlify>
+        <p>
+          Feel free to email us via
+          <a
+            style={{
+              textDecoration: "none",
+              color: "#07f",
+              marginLeft: "0.3rem",
+              marginRight: "0.3rem",
+            }}
+            href="mailto:info@odishabeverages.com"
+            target="_top"
+          >
+            info@odishabeverages.com
+          </a>
+          {subtitle}
+        </p>
+        <form name="contact">
           <div className="input-area">
             <input
               type="text"
@@ -17,7 +32,7 @@ const Contact = ({ title, subtitle, id }) => {
               required
               autoComplete="off"
             />
-            <label className="label-name" for="name">
+            <label className="label-name" htmlFor="name">
               <span className="content-name">Name</span>
             </label>
           </div>
@@ -30,7 +45,7 @@ const Contact = ({ title, subtitle, id }) => {
               required
               autoComplete="off"
             />
-            <label className="label-name" for="email">
+            <label className="label-name" htmlFor="email">
               <span className="content-name">Email</span>
             </label>
           </div>
@@ -44,7 +59,7 @@ const Contact = ({ title, subtitle, id }) => {
               autoComplete="off"
               aria-label="Message"
             />
-            <label className="label-name" for="message">
+            <label className="label-name" htmlFor="message">
               <span className="content-name">Message</span>
             </label>
           </div>
@@ -59,7 +74,8 @@ const Contact = ({ title, subtitle, id }) => {
 }
 
 const ContactWrapper = styled.section`
-  padding: 100px 30px;
+  padding: 20px 30px 100px 30px;
+  color: #fff;
 
   .content-container {
     width: 100%;
@@ -70,13 +86,14 @@ const ContactWrapper = styled.section`
       background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
+      color: #fff;
       @media (min-width: 768px) {
         text-align: center;
       }
     }
     p {
       margin-bottom: 2rem;
+      color: #fff;
 
       @media (min-width: 768px) {
         text-align: center;

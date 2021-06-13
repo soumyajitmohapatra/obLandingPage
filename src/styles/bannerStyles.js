@@ -23,6 +23,7 @@ export const BannerStyles = styled.section`
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    height: 100vh;
 
     @media (min-width: 768px) {
       max-width: 650px;

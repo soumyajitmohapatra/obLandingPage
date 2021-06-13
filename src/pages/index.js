@@ -4,14 +4,16 @@ import TextBlock from "../components/TextBlock/textBlock"
 import TextBlockImg from "../components/TextBlockImg/textBlockImg"
 import Perk from "../components/Perk/perk"
 import Button from "../components/Button/button"
-import Packages from "../components/Packages/packages"
-import Package from "../components/Package/package"
+import Products from "../components/Products"
+import Product from "../components/Product"
+import Leader from '../components/CompanyLeader'
+import Countdown from "../components/Countdown"
 import Contact from "../components/Contact/contact"
 import { Link } from "react-scroll"
 
-import perk1Img from "../images/speed.svg"
-import perk2Img from "../images/piggy-bank.svg"
-import perk3Img from "../images/friendly-staff.svg"
+import perk1Img from "../images/organic.png"
+import perk2Img from "../images/healthcare.png"
+import perk3Img from "../images/odisha.png"
 
 import { IconContext } from "react-icons"
 import { MdDone, MdClear } from "react-icons/md"
@@ -22,8 +24,13 @@ const HomePage = () => {
       <Banner />
       <TextBlock
         id="about"
-        title="Developing a new business is never easy, but Startup is here to help"
-        paragraph="With a super-fast Gatsby powered website you have the perfect platform to get your idea off the ground. Its the perfect template to help turn your idea into a reality."
+        title="Our Mission"
+        paragraph="Our mission is to serve the traditional and cultural flavoured drink of
+        Odisha to the consumer which are now getting away due to the
+        modernization of society. now a days people want you have healthy
+        natural and traditional drink but due to their busy day to day life
+        they are unable to have it. we will help them to overcome this
+        problem by providing such kind of drink in a handy packaged manner."
       >
         <Link to="perks" smooth={true} duration={500}>
           <Button label="Tell Me More" cta="Tell Me More!" />
@@ -31,44 +38,45 @@ const HomePage = () => {
       </TextBlock>
       <TextBlockImg
         id="perks"
-        title="We have the tools to help you suceed"
-        subtitle="Startup is perfect for helping to to start and grow your business. As
-          you begin to gain new clients and expand you will see the benefits of
-          a super-fast Gatsby website"
+        title="What do your expect from our products?"
+        subtitle="One good thing about our products is that the taste and nutrition go hand in hand. 
+        Our products are enriched with Odia tradition and love of Odia Peoples. So you get what you want and what you love."
       >
         <div className="flex-container trio-block">
           <Perk
             img={perk1Img}
             alt="Super fast speed increases"
-            title="Speedy"
-            content="Super-fast response times ensure your business is not affected"
+            title="100% Organic"
+            content="Our products are made of 100% pure and oroganic fruits."
           />
           <Perk
             img={perk2Img}
-            alt="Great savings to be made"
-            title="Affordable"
-            content="A choice of packages to suit every business type and size"
+            alt="Healthy"
+            title="100% Healthy"
+            content="Our drinks are rich in Vitamin-A/C/B1/B2."
           />
           <Perk
             img={perk3Img}
+            style={{ height: "130px" }}
             alt="Super fast speed increases"
-            title="Friendly"
-            content="Advisors who are available 24/7, all with exprt knowledge"
+            title="100% Odia"
+            content="Made with Odia flavors, Made For India"
           />
         </div>
       </TextBlockImg>
-      <Packages
-        title="Our Packages"
-        para="Choose the perfect solution for you. With benefits to suit all budgets Startup can offer amazing value and expert advice"
-      >
-        <IconContext.Provider
+      <Products  title="Product Launch" para="Countdown ends at July 30, 2021">
+        <Countdown
+          timeTillDate="06 30 2021, 6:00 am"
+          timeFormat="MM DD YYYY, h:mm a"
+        />
+        {/* <IconContext.Provider
           value={{
             color: "#7FFF00",
             size: "1.2em",
             style: { verticalAlign: "middle", marginRight: "5px" },
           }}
         >
-          <Package title="Standard">
+          <Product title="Standard">
             <ul>
               <li>
                 <MdDone />1 User
@@ -89,8 +97,8 @@ const HomePage = () => {
             <Link to="contact" smooth={true} duration={500}>
               <Button label="I want this" cta="I want this!" />
             </Link>
-          </Package>
-          <Package title="Hyper" active={true}>
+          </Product>
+          <Product title="Hyper" active={true}>
             <ul>
               <li>
                 <MdDone />
@@ -112,8 +120,8 @@ const HomePage = () => {
             <Link to="contact" smooth={true} duration={500}>
               <Button label="I want this" cta="I want this!" />
             </Link>
-          </Package>
-          <Package title="Super">
+          </Product>
+          <Product title="Super">
             <ul>
               <li>
                 <MdDone />
@@ -135,14 +143,15 @@ const HomePage = () => {
             <Link to="contact" smooth={true} duration={500}>
               <Button label="I want this" cta="I want this!" />
             </Link>
-          </Package>
-        </IconContext.Provider>
-      </Packages>
+          </Product>
+        </IconContext.Provider> */}
+      </Products>
+      <Leader/>
       <Contact
         id="contact"
-        title="Contact Startup today and see how we can help your business grow"
-        subtitle="Every second counts when you're looking to get your new business started. Drop Startup a message and one of our representatives will be in contact"
-      />
+        title="Get in touch"
+        subtitle="or fill in the contact form down below."
+        />
     </>
   )
 }

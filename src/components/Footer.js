@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import {
   mainMenuItems,
   footerMenuItems,
@@ -7,7 +7,7 @@ import {
 } from "../constants/menu-items"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-
+import { Link } from "react-scroll"
 const Footer = ({ Logo }) => {
   const data = useStaticQuery(
     graphql`
@@ -37,14 +37,18 @@ const Footer = ({ Logo }) => {
               </Link>
             )}
             <address>
-              85 Simone Weil Avenue
+              CHANDAKA INDUSTRIAL ESTATE
               <br />
-              Watton-at-Stone
+              NEAR INFOCITY, PLOT NO. 38/1
               <br />
-              SG14 8BL
+              BHUBANESWAR-751024
             </address>
-            <a className="telephone" href="tel:+004407076009211">
-              07076 009 211
+            <a className="telephone" href="tel:+919937384021">
+              9937384021,
+            </a>
+
+            <a className="telephone" href="tel:+919937384024">
+              9937384024
             </a>
           </div>
         ) : null}
@@ -68,7 +72,7 @@ const Footer = ({ Logo }) => {
             )}
 
             {/* If footer menu items are being imported, render this */}
-            {footerMenuItems && (
+            {/* {footerMenuItems && (
               <ul className="footer-menu">
                 {footerMenuItems.map((item, index) => (
                   <li key={`footerMenuItem${index}`}>
@@ -76,7 +80,7 @@ const Footer = ({ Logo }) => {
                   </li>
                 ))}
               </ul>
-            )}
+            )} */}
 
             {/* If social menu items are being imported, render this */}
             {socialMenuItems && (
@@ -102,9 +106,8 @@ const Footer = ({ Logo }) => {
 
         <div className="copy-cont">
           <ul className="copy">
-            <li>&copy; {new Date().getFullYear()}</li>
-
-            {/* if there is an author stated in the config, render this */}
+            <li>&copy; {new Date().getFullYear()} odisha Beverages</li>
+            {/* <li>|</li>
             {footerData.author && (
               <li>
                 <a
@@ -115,7 +118,7 @@ const Footer = ({ Logo }) => {
                   {footerData.author}
                 </a>
               </li>
-            )}
+            )} */}
           </ul>
         </div>
       </div>

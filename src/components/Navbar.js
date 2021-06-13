@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { mainMenuItems } from "../constants/links"
 import styled from "styled-components"
+import { Link } from "react-scroll"
 
 const Navbar = ({ Logo }) => {
   const [isOpen, setNav] = useState(false)
@@ -11,7 +12,7 @@ const Navbar = ({ Logo }) => {
   return (
     <NavStyles>
       <div className="masthead flex-container">
-        <img src={Logo} alt="Startup Logo" />
+        <img src={Logo} alt="Logo" style={{ width: "22%" }} />
         <button
           className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
           type="button"
@@ -27,7 +28,9 @@ const Navbar = ({ Logo }) => {
         {mainMenuItems.map((item, index) => {
           return (
             <li key={index}>
-              <a href="#">{item.text}</a>
+              <Link to={`${item.path}`} smooth={true} duration={500}>
+                <span>{item.text}</span>
+              </Link>
             </li>
           )
         })}
@@ -46,7 +49,6 @@ export const NavStyles = styled.nav`
   display: flex;
   padding: 1rem;
   box-sizing: border-box;
-
   .masthead {
     z-index: 3;
     width: 100%;
@@ -89,12 +91,14 @@ export const NavStyles = styled.nav`
       font-weight: 400;
       margin-left: 0;
       padding: 0.75rem 0;
+      span {
+        mix-blend-mode: difference;
+        color: #1b1b1b;
+      }
       a {
         text-decoration: none;
         text-transform: capitalize;
-        color: #fff;
         transition: 0.3s;
-
         &.active {
           color: #e609b5;
         }

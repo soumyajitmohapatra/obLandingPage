@@ -1,22 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 
-const Packages = ({ title, para, children }) => {
+const Products = ({ title, para, children }) => {
   return (
-    <PackagesWrapper>
+    <ProductsWrapper id="products">
       <div className="text-area">
         <h2>{title}</h2>
         <p>{para}</p>
       </div>
       <div className="flex-container">{children}</div>
-    </PackagesWrapper>
+    </ProductsWrapper>
   )
 }
 
-const PackagesWrapper = styled.section`
-  padding: 100px 30px;
+const ProductsWrapper = styled.section`
+  padding: 30px 30px 120px 30px;
   text-align: center;
-
+  background: #f5f6fa;
+  color: #1b1b1b;
   .text-area {
     max-width: 500px;
     margin: 0 auto;
@@ -27,9 +28,9 @@ const PackagesWrapper = styled.section`
   }
 
   h2 {
-    background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #055527;
+    font-weight: bolder;
+    font-size: 3rem;
   }
 
   .flex-container {
@@ -44,4 +45,4 @@ const PackagesWrapper = styled.section`
   }
 `
 
-export default Packages
+export default Products

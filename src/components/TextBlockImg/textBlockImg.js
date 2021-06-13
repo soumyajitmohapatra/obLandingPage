@@ -4,55 +4,45 @@ import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
 const TextBlockImg = ({ title, children, subtitle, id }) => {
-  const data = useStaticQuery(graphql`{
-  file(relativePath: {eq: "purple-bg.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "purple-bg.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 90, layout: FULL_WIDTH)
+        }
+      }
     }
-  }
-}
-`)
+  `)
   return (
-    <BackgroundImage
-      id="perks"
-      Tag="section"
-      fluid={data.file.childImageSharp.gatsbyImageData}
-    >
-      <TextBlockImgWrapper>
-        <div className="content-container">
-          <h2>{title}</h2>
-          <p>{subtitle}</p>
-          {children}
-        </div>
-      </TextBlockImgWrapper>
-    </BackgroundImage>
-  );
+    <TextBlockImgWrapper>
+      <div className="content-container">
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
+        {children}
+      </div>
+    </TextBlockImgWrapper>
+  )
 }
 
 const TextBlockImgWrapper = styled.section`
-  text-align: center;
-  padding: 100px 30px;
+  background: #f5f6fa;
+  color: #1b1b1b;
+  text-align: left;
+  padding: 60px 20px;
 
-  .content-container {
-    max-width: 500px;
-
-    @media (min-width: 768px) {
-      max-width: 650px;
-    }
-
-    @media (min-width: 1200px) {
-      max-width: 900px;
-    }
+  @media (min-width: 768px) {
+    padding: 80px 30px;
+    text-align: center;
   }
 
-  h2 {
-    background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  h1 {
+    color: #055527;
+    font-weight: bolder;
+    font-size: 3rem;
   }
 
   p {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 `
 

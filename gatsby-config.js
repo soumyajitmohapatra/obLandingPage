@@ -8,15 +8,16 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: "Startup",
-    titleTemplate: "%s | Helping startups get started",
-    description: "A simple one-page site for new businesses that uses GatsbyJS",
+    title: "Odisha Beverages",
+    titleTemplate: "%s | A company build with flavours of Odisha",
+    description: "Odisha Beverages is a new gen company build on the old tradional flavours of Odisha ",
     siteUrl: "https://thestartup.netlify.com",
-    author: "Morgan Baker",
-    authorSite: "https://www.morganbaker.dev",
+    author: "Soumyajit Mohapatra",
+    authorSite: "https://linktr.ee/so_mya_jit",
     image: "/yellow-metal-design-decoration.jpg",
     twitterUsername: "@twitter",
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,5 +31,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-image`,
   ],
 }

@@ -1,18 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 
-const Package = ({ title, children, active }) => {
+const Product = ({ title, children, active }) => {
   return (
-    <PackageWrapper className={active ? "active" : "not-active"}>
+    <ProductWrapper className={active ? "active" : "not-active"}>
       <div className="content">
         <h2>{title}</h2>
         {children}
       </div>
-    </PackageWrapper>
+    </ProductWrapper>
   )
 }
 
-const PackageWrapper = styled.article`
+const ProductWrapper = styled.article`
   position: relative;
   z-index: 1;
   width: 100%;
@@ -90,4 +90,4 @@ const PackageWrapper = styled.article`
   }
 `
 
-export default Package
+export default Product
