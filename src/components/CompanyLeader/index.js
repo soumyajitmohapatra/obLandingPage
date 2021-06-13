@@ -5,13 +5,13 @@ function index() {
   return (
     <Section>
       <div class="card active">
-        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="" />
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
         <h4>Er Mahabir Biswal</h4>
         <small>Founder and Chairman</small>
         <button>Connect</button>
       </div>
       <div class="card active">
-        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="" />
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
         <h4>Ramkinkar Mishara</h4>
         <small>CEO</small>
         <button>Connect</button>
