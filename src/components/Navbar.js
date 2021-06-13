@@ -71,7 +71,7 @@ export const NavStyles = styled.nav`
     justify-content: center;
     position: fixed;
     text-align: center;
-    background: linear-gradient(45deg, #060c21, #0d0139);
+    background: #fff;
     margin: 0;
     height: 100%;
     top: 0;
@@ -90,7 +90,6 @@ export const NavStyles = styled.nav`
       margin-left: 0;
       padding: 0.75rem 0;
       span {
-        mix-blend-mode: difference;
         color: #1b1b1b;
       }
       a {
@@ -125,7 +124,7 @@ export const NavStyles = styled.nav`
       display: block;
       width: 30px;
       height: 2px;
-      background-color: #fff;
+      background-color: #1b1b1b;
       transition: 0.2s ease-in;
 
       &:nth-child(1) {

@@ -38,7 +38,7 @@ const HomePage = () => {
       </TextBlock>
       <TextBlockImg
         id="perks"
-        title="What do you expect from our products?"
+        title="What will you expect from our products?"
         subtitle="One good thing about our products is that the taste and nutrition go hand in hand. 
         Our products are enriched with Odia tradition and love of Odia Peoples. So you get what you want and what you love."
       >
