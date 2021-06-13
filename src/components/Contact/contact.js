@@ -23,7 +23,14 @@ const Contact = ({ title, subtitle, id }) => {
           </a>
           {subtitle}
         </p>
-        <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit="submit"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
           <div className="input-area">
             <input
               type="text"
@@ -58,6 +65,9 @@ const Contact = ({ title, subtitle, id }) => {
               required
               autoComplete="off"
               aria-label="Message"
+              style={{
+                textTransform: "capitalize",
+              }}
             />
             <label className="label-name" htmlFor="message">
               <span className="content-name">Message</span>
@@ -125,7 +135,6 @@ const ContactWrapper = styled.section`
         border: none;
         background-color: #0b132e;
         color: #fff;
-        text-transform: uppercase;
         position: relative;
         box-sizing: border-box;
         outline: none;
