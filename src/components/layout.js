@@ -5,7 +5,7 @@ import Footer from "./Footer"
 import Seo from "../components/Seo/seo"
 import GlobalStyles from "../styles/GlobalStyles"
 import TypographyStyles from "../styles/TypographyStyles"
-import Logo from "../images/Logo.png"
+import Logo from "../images/VerticalLogo.png"
 
 const Layout = ({ children }) => {
   return (
