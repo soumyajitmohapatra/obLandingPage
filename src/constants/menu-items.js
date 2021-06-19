@@ -38,7 +38,7 @@ export const socialMenuItems = [
   },
   {
     icon: <FaWhatsapp />,
-    url: "https://wa.me/9937384021/?text=Hi Odisha Beverages, ",
+    url: "https://wa.me/+919937384021/?text=Hi Odisha Beverages, ",
     name: "Whatsapp",
   },
 ]
