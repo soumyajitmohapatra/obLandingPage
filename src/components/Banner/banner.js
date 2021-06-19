@@ -12,7 +12,7 @@ const Banner = () => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "background.png" }) {
+        placeholderImage: file(relativePath: { eq: "background.webp" }) {
           childImageSharp {
             gatsbyImageData(quality: 90, width: 1920, formats: [AUTO, WEBP])
           }
