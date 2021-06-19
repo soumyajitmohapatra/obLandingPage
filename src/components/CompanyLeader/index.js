@@ -6,7 +6,7 @@ function index() {
     <Section>
       <div className="card active">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-        <h4>Er Mahabir Biswal</h4>
+        <h4>Er. Mahabir Biswal</h4>
         <small>Founder and Chairman</small>
         <button>
           <a href="mailto:mahabirbiswal1234@gmail.com">Connect</a>
@@ -14,7 +14,7 @@ function index() {
       </div>
       <div className="card active">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-        <h4>Ramkinkar Mishara</h4>
+        <h4>RK Mishara</h4>
         <small>CEO</small>
         <button>
           <a href="mailto:rakimishra1@gmail.com">Connect</a>

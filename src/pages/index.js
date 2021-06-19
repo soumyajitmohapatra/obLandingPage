@@ -11,12 +11,9 @@ import Countdown from "../components/Countdown"
 import Contact from "../components/Contact/contact"
 import { Link } from "react-scroll"
 
-import perk1Img from "../images/organic.png"
-import perk2Img from "../images/healthcare.png"
-import perk3Img from "../images/odisha.png"
-
-import { IconContext } from "react-icons"
-import { MdDone, MdClear } from "react-icons/md"
+import perk1Img from "../images/organic.webp"
+import perk2Img from "../images/healthcare.webp"
+import perk3Img from "../images/odisha.webp"
 
 const HomePage = () => {
   return (

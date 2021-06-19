@@ -1,16 +1,44 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { mainMenuItems } from "../constants/links"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 
 const Navbar = ({ Logo }) => {
   const [isOpen, setNav] = useState(false)
-
+  const [visible, setVisible] = useState(true)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
+
+  const handleScroll = () => {
+    // find current scroll position
+    const currentScrollPos = window.pageYOffset
+
+    // set state based on location info (explained in more detail below)
+    setVisible(
+      (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 70) ||
+        currentScrollPos < 10
+    )
+
+    // set state to new scroll position
+    setPrevScrollPos(currentScrollPos)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [prevScrollPos, visible, handleScroll])
+
   return (
-    <NavStyles>
+    <NavStyles
+      style={{
+        top: visible ? "0" : "-160px",
+        visibility: visible ? "visible" : "hidden",
+      }}
+    >
       <div className="masthead flex-container">
         <img src={Logo} alt="Logo" />
         <button
@@ -28,7 +56,12 @@ const Navbar = ({ Logo }) => {
         {mainMenuItems.map((item, index) => {
           return (
             <li key={index}>
-              <Link to={`${item.path}`} smooth={true} duration={500}>
+              <Link
+                to={`${item.path}`}
+                smooth={true}
+                duration={500}
+                onClick={toggleNav}
+              >
                 <span>{item.text}</span>
               </Link>
             </li>
@@ -42,7 +75,6 @@ const Navbar = ({ Logo }) => {
 export const NavStyles = styled.nav`
   position: fixed;
   z-index: 10;
-  top: 0;
   width: 100%;
   left: 0;
   right: 0;
@@ -55,12 +87,12 @@ export const NavStyles = styled.nav`
     justify-content: space-between;
 
     img {
-      width: 14%;
+      width: 16%;
       @media (max-width: 388px) {
-        width: 28%;
+        width: 32%;
       }
       @media (min-width: 1200px) {
-        width: 14%;
+        width: 16%;
       }
     }
   }
@@ -91,14 +123,18 @@ export const NavStyles = styled.nav`
       padding: 0.75rem 0;
       span {
         color: #1b1b1b;
+        &.active {
+          color: #e609b5;
+        }
+        &:hover {
+          cursor: pointer;
+          color: #e609b5;
+        }
       }
       a {
         text-decoration: none;
         text-transform: capitalize;
         transition: 0.3s;
-        &.active {
-          color: #e609b5;
-        }
       }
       &:hover {
         cursor: pointer;
