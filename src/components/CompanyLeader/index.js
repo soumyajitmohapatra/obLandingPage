@@ -14,7 +14,7 @@ function index() {
       </div>
       <div className="card active">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-        <h4>RK Mishara</h4>
+        <h4>RK Mishra</h4>
         <small>CEO</small>
         <button>
           <a href="mailto:rakimishra1@gmail.com">Connect</a>
