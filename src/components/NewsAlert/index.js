@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "react-responsive-modal/styles.css"
 import { Modal } from "react-responsive-modal"
-import img from "../../images/hiring.jpg"
+import img from "../../images/hiring.webp"
 function NewsAlert() {
   const [open, setOpen] = useState(false)
 
