@@ -67,6 +67,14 @@ const Navbar = ({ Logo }) => {
             </li>
           )
         })}
+        <li key="hdsh">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdTW-9Y2wzOLiD47DIJ4TJz6GiAiXCII5D4oLLBvm3V9ajrrw/viewform"
+            target="_blank"
+          >
+            <span>Career</span>
+          </a>
+        </li>
       </ul>
     </NavStyles>
   )

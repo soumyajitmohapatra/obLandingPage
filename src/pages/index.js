@@ -14,10 +14,12 @@ import { Link } from "react-scroll"
 import perk1Img from "../images/organic.webp"
 import perk2Img from "../images/healthcare.webp"
 import perk3Img from "../images/odisha.webp"
+import NewsAlert from "../components/NewsAlert"
 
 const HomePage = () => {
   return (
     <>
+      <NewsAlert />
       <Banner />
       <TextBlock
         id="about"

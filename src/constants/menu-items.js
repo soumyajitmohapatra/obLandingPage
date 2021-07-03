@@ -18,6 +18,7 @@ export const mainMenuItems = [
     path: "contact",
     title: "contact",
   },
+ 
 ]
 
 export const socialMenuItems = [
