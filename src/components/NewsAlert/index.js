@@ -1,22 +1,14 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import "react-responsive-modal/styles.css"
 import { Modal } from "react-responsive-modal"
 import img from "../../images/hiring.webp"
-function NewsAlert() {
-  const [open, setOpen] = useState(false)
-
-  const onOpenModal = () => setOpen(true)
-  const onCloseModal = () => setOpen(false)
-
-  useEffect(() => {
-    onOpenModal()
-  }, [])
+function NewsAlert({ onClose, open }) {
   return (
     <div>
-      <Modal open={open} onClose={onCloseModal} center>
+      <Modal open={open} onClose={onClose} center>
         <a
           target="_blank"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdTW-9Y2wzOLiD47DIJ4TJz6GiAiXCII5D4oLLBvm3V9ajrrw/viewform"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe69qQFdadrUcMrQ470SiBFuCBCuALIXm2GuoqQzD1NhG0zLQ/viewform"
         >
           <img src={img} alt="hiring" style={{ width: "100%" }} />
         </a>

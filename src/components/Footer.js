@@ -70,10 +70,10 @@ const Footer = ({ Logo }) => {
                   ))}
                 <li key="hdsh">
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdTW-9Y2wzOLiD47DIJ4TJz6GiAiXCII5D4oLLBvm3V9ajrrw/viewform"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe69qQFdadrUcMrQ470SiBFuCBCuALIXm2GuoqQzD1NhG0zLQ/viewform"
                     target="_blank"
                   >
-                    <span className="neon">We are hiring</span>
+                    <span className="neon">Apply for internship</span>
                   </a>
                 </li>
               </ul>

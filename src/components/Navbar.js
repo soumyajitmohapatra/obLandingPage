@@ -3,7 +3,7 @@ import { mainMenuItems } from "../constants/links"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 
-const Navbar = ({ Logo }) => {
+const Navbar = ({ Logo,onClick }) => {
   const [isOpen, setNav] = useState(false)
   const [visible, setVisible] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
@@ -67,13 +67,13 @@ const Navbar = ({ Logo }) => {
             </li>
           )
         })}
-        <li key="hdsh">
-          <a
+        <li key="hdsh" onClick={onClick}>
+          {/* <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdTW-9Y2wzOLiD47DIJ4TJz6GiAiXCII5D4oLLBvm3V9ajrrw/viewform"
             target="_blank"
-          >
+          > */}
             <span>Career</span>
-          </a>
+          {/* </a> */}
         </li>
       </ul>
     </NavStyles>
