@@ -26,7 +26,7 @@ const HomePage = () => {
         title="Our Mission"
         paragraph="Our mission is to serve the traditional and cultural flavoured drink of
         Odisha to the consumer which are now getting away due to the
-        modernization of society. Now a days people want you have healthy
+        modernization of society. Now a days people want to have healthy,
         natural and traditional drink but due to their busy day to day life
         they are unable to have it, we will help them to overcome this
         problem by providing such kind of drink in a handy packaged manner."

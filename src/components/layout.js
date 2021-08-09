@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       <Seo />
       <GlobalStyles />
       <TypographyStyles />
-      <NewsAlert open={open} onClose={onCloseModal} />
+      {/* <NewsAlert open={open} onClose={onCloseModal} /> */}
       <Navbar
         Logo={Logo}
         onClick={() => {

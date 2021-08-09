@@ -43,13 +43,27 @@ const Footer = ({ Logo }) => {
               <br />
               BHUBANESWAR-751024
             </address>
-            <a className="telephone" href="tel:+919937384021">
-              9937384021,
-            </a>
+            <div style={{ display: "block" }}>
+              <a className="telephone" href="tel:+919937384021">
+                9937384021,
+              </a>
 
-            <a className="telephone" href="tel:+919937384024">
-              9937384024
-            </a>
+              <a className="telephone" href="tel:+919937384024">
+                9937384024,
+              </a>
+              <a className="telephone" href="tel:+919937937304">
+                9937937304,
+              </a>
+              <a className="telephone" href="tel:+919937937305">
+                9937937305,
+              </a>
+              <a className="telephone" href="tel:+919937937306">
+                9937937306,
+              </a>
+              <a className="telephone" href="tel:+919937937307">
+                9937937307,
+              </a>
+            </div>
           </div>
         ) : null}
 
@@ -68,14 +82,14 @@ const Footer = ({ Logo }) => {
                       <Link to={item.path}>{item.title}</Link>
                     </li>
                   ))}
-                <li key="hdsh">
+                {/* <li key="hdsh">
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSe69qQFdadrUcMrQ470SiBFuCBCuALIXm2GuoqQzD1NhG0zLQ/viewform"
                     target="_blank"
                   >
                     <span className="neon">Apply for internship</span>
                   </a>
-                </li>
+                </li> */}
               </ul>
             )}
 
